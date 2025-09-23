@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/webp" href="/icon.webp" />
+  <title>yomamasostupidsheboughtticketstoxbox.live</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: black;
+    }
+
+    .bg-video {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      display: block;
+      pointer-events: none;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <video
+    class="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    aria-hidden="true"
+  >
+    <source src="xbox.mp4" type="video/mp4" />
+    Yo mama so OLD. She visited this site. on a browser that doesn't support HTML5 VIDEO!
+  </video>
+
+  <!-- for screen readers -->
+  <h1 class="visually-hidden">yo mama so STUPID. she bought tickets. to XBOX. LIVE! get it? because she thought it was a concert?</h1>
+
+  <script>
+    document.addEventListener('click', async () => {
+      const v = document.querySelector('.bg-video');
+      if (v && v.muted) {
+        try {
+          await v.play();
+          v.muted = false;
+        } catch (e) {
+          // fuck
+        }
+      }
+    }, { once: true });
+  </script>
+</body>
+</html>
